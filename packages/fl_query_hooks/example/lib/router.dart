@@ -1,5 +1,6 @@
 import "package:fl_query_hooks_example/pages/home.dart";
 import "package:fl_query_hooks_example/pages/infinite_query.dart";
+import "package:fl_query_hooks_example/pages/mutation/mutation-2.dart";
 import "package:fl_query_hooks_example/pages/mutation/mutation.dart";
 import "package:fl_query_hooks_example/pages/query.dart";
 import "package:go_router/go_router.dart";
@@ -22,6 +23,10 @@ final router = GoRouter(
     GoRoute(
       path: '/mutation',
       builder: (context, state) => const MutationPage(),
+    ),
+    GoRoute(
+      path: '/mutation2',
+      builder: (context, state) => const Mutation2(),
     ),
   ],
 );

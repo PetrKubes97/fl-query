@@ -123,6 +123,10 @@ class Mutation<DataType, ErrorType, VariablesType>
           }
         },
       );
+
+      // The future should finish with the operation.
+      // We are not returning data (but null), because data is set in the global state.
+      await _operation?.valueOrCancellation(null);
     });
   }
 
